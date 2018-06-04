@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Row from './components/Row';
-import './css/Main.css';
+import './css/App.css';
 import secData from './secdata.json';
 
 class App extends Component {

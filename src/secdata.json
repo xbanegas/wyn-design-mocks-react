@@ -1,26 +1,57 @@
-[
+[	
+	{
+		"row": 1,
+		"boxNum": 1,
+		"title": "Anders Lindn",
+		"category": "featured"
+	},
+	{
+		"row": 2,
+		"boxNum": 1,
+		"title": "",
+		"category": "quote"
+	},
 	{
 		"row": 2,
 		"boxNum": 2,
-		"title": "...",
-		"category": "feaa"
+		"title": "Olaf Hussein 14 / 15",
+		"category": "style"
 	},
 	{
 		"row": 3,
 		"boxNum": 1,
-		"title": "emst",
-		"category": "icons"
+		"title": "Airfield",
+		"category": "Photography"
 	},
 	{
-		"row": 2,
-		"boxNum": 1,
-		"title": "...",
-		"category": "quote"
+		"row": 3,
+		"boxNum": 2,
+		"title": "Ziiiro Orbit",
+		"category": "item",
+		"price": "$120"
 	},
 	{
 		"row": 3,
 		"boxNum": 3,
-		"title": "Spaces",
-		"category": "musk"
-	}	
+		"title": "Are Self Driving Cars The Future?",
+		"category": "Featured"
+	},
+	{
+		"row": 3,
+		"boxNum": 4,
+		"title": "Lapka Bam",
+		"category": "Gear"
+	},
+	{
+		"row": 4,
+		"boxNum": 1,
+		"title": "Smeig",
+		"category": "Technology"
+	},
+	{
+		"row": 4,
+		"boxNum": 2,
+		"title": "Balloon Bench",
+		"category": "Design"
+	}
 ]

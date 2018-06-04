@@ -56,7 +56,7 @@ class Section extends Component {
 
 		return (
       // this.props.styleName + ' ' + this.props.secAlign
-			<section>
+			<section className={this.props.box}>
 				{secHeader(this.props)}
 				{Description(this.props)}
 				{secFooter(this.props)}

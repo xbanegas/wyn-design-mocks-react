@@ -16,13 +16,13 @@ class App extends Component {
 			if (!rows[section.row][section.boxNum]) { rows[section.row][section.boxNum] = {}; }
 			rows[section.row][section.boxNum] = section;
 		});
-		this.setState({rows: rows});
 		let these_rows = [];
 		rows.forEach(function(row, index){
 			let rowNumber = index;
-			let this_row = <Row rowNum={`row-${rowNumber}`} sections={rows[rowNumber]-1} />;
+			let this_row = <Row rowNum={`row-${rowNumber}`} sections={rows[rowNumber]} />;
 			these_rows.push(this_row);
     });
+    
     console.log(these_rows);
     // console.log(rows);
     return these_rows;

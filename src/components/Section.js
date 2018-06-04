@@ -3,7 +3,9 @@ import '../css/Section.css';
 
 class Section extends Component {
 
-  
+  componentDidMount(){
+    console.log(this.props);
+  }
 
 	render() {
 		function Description(props) {
@@ -53,7 +55,8 @@ class Section extends Component {
 		}
 
 		return (
-			<section className={this.props.styleName + ' ' + this.props.secAlign}>
+      // this.props.styleName + ' ' + this.props.secAlign
+			<section>
 				{secHeader(this.props)}
 				{Description(this.props)}
 				{secFooter(this.props)}

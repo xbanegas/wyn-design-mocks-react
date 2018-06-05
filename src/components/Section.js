@@ -14,6 +14,7 @@ class Section extends Component {
       likes: prevState.likes += 1
     }));
   }
+  
   secFooter(props) {
     const category = props.category || '';
     if ((!(category === 'item')) && (!(category === 'quote'))) {
@@ -73,15 +74,15 @@ class Section extends Component {
     }
   }
 
-	render() {
-		return (
-			<section className={this.props.box + ' ' + this.props.secAlign}>
-				{this.secHeader(this.props)}
-				{this.Description(this.props)}
-				{this.secFooter(this.props)}
-			</section>
-		);
-	}
+  render() {
+    return (
+      <section className={this.props.box + ' ' + this.props.secAlign}>
+        {this.secHeader(this.props)}
+        {this.Description(this.props)}
+        {this.secFooter(this.props)}
+      </section>
+    );
+  }
 }
 
 export default Section;

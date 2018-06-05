@@ -8,17 +8,18 @@ class Row extends Component {
     super(props);
     this.addSections(props);
   }
-	addSections(props){
+
+  addSections(props){
     if (props){
-    let these_props = props.sections.slice(1);
-    // console.log(these_props);
-    let these_sections = [];
-    these_props.forEach(section => {
+      let these_props = props.sections.slice(1);
+      // console.log(these_props);
+      let these_sections = [];
+      these_props.forEach(section => {
       // console.log(section);
-      these_sections.push(<Section box={`box-${section.boxNum}`} category={section.category} title={section.title} 
-      description={section.description} price={section.price} hasDescription={section.description} secAlign={section.align}
-      quote={section.quote} author={section.author}/>);
-    });
+        these_sections.push(<Section box={`box-${section.boxNum}`} category={section.category} title={section.title} 
+          description={section.description} price={section.price} hasDescription={section.description} secAlign={section.align}
+          quote={section.quote} author={section.author}/>);
+      });
     this.sections = these_sections;
   }
 	}

@@ -12,16 +12,16 @@ class App extends Component {
 
   formatRows(secData){
     let rows = [];
-		secData.forEach(function(section){
-			if (!rows[section.row]) { rows[section.row] = [] }
-			if (!rows[section.row][section.boxNum]) { rows[section.row][section.boxNum] = {}; }
-			rows[section.row][section.boxNum] = section;
-		});
-		let these_rows = [];
-		rows.forEach(function(row, index){
-			let rowNumber = index;
-			let this_row = <Row rowNum={`row-${rowNumber}`} sections={rows[rowNumber]} />;
-			these_rows.push(this_row);
+    secData.forEach(function(section){
+      if (!rows[section.row]) { rows[section.row] = [] }
+      if (!rows[section.row][section.boxNum]) { rows[section.row][section.boxNum] = {}; }
+      rows[section.row][section.boxNum] = section;
+    });
+    let these_rows = [];
+    rows.forEach(function(row, index){
+      let rowNumber = index;
+      let this_row = <Row rowNum={`row-${rowNumber}`} sections={rows[rowNumber]} />;
+      these_rows.push(this_row);
     });
     
     // console.log(these_rows);
@@ -31,10 +31,10 @@ class App extends Component {
 
   render() {
     return (
-		<div className="App">
-      <Nav />
-      {this.these_rows}
-    </div>
+      <div className="App">
+        <Nav />
+        {this.these_rows}
+      </div>
     );
   }
 }

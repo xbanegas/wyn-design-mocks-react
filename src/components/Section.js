@@ -1,35 +1,23 @@
 import React, { Component } from 'react';
 import SecHeader from './SecHeader';
-import '../css/Section.css';
+import SecDescription from './SecDescription';
 import SecFooter from './SecFooter';
+import '../css/Section.css';
 
-/**
- * @todo move secFooter and secHeader to their own components 
- */
 
 class Section extends Component {
   constructor(props){
     super(props);
     this.section = props.secData;
-    console.log(this.section);
-  }
-
-
-
-  Description() {
-    const hasDescription = this.section.description || false;
-    if (hasDescription) {
-      return ( <div className="description">{hasDescription}</div> );
-    } else { 
-      return (null);
-    }
+    // console.log(this.section);
   }
 
   render() {
+    let class_name = `box-${this.section.boxNum}` + ' ' + this.section.align;
     return (
-      <section className={`box-${this.section.boxNum}` + ' ' + this.section.align}>
+      <section className={class_name}>
         <SecHeader secData={this.section} />
-        {this.Description()}
+        <SecDescription secData={this.section} />
         <SecFooter secData={this.section} />
       </section>
     );

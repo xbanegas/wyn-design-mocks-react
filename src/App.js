@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Nav from './components/Nav';
 import Row from './components/Row';
 import './css/App.css';
 import secData from './secdata.json';
@@ -31,6 +32,7 @@ class App extends Component {
   render() {
     return (
 		<div className="App">
+      <Nav />
       {this.these_rows}
     </div>
     );

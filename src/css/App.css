@@ -17,6 +17,9 @@ h4.category {
 
 /* Navbar */
 nav { text-align: center; position: relative; display: flex; justify-content:space-between;}
+@media (max-width: 768px) {
+	nav {padding: 1rem;}
+}
 
 #page-title { 
 	font-family: 'Sunflower', sans-serif; 
@@ -129,9 +132,10 @@ nav { text-align: center; position: relative; display: flex; justify-content:spa
 }
 @media (max-width: 768px) {
 	#row-2 .box-2 { 
-		background-size:cover;
+		background-size:215%;
 		background-position:right 0px;
-		flex: 1;
+    flex: 1;
+    margin:0;
 	}
 }
 /* ROW 3 */
@@ -171,8 +175,10 @@ nav { text-align: center; position: relative; display: flex; justify-content:spa
 
 @media (max-width: 768px) {
 	#row-3 .box-2 {
-		background-size:cover;
-		background-repeat:no-repeat;
+		background-size:265%;
+    background-repeat:no-repeat;
+    background-position: center;
+    margin:0;
 	}
 }
 

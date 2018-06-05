@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SecHeader from './SecHeader';
 import '../css/Section.css';
 
 /**
@@ -55,36 +56,12 @@ class Section extends Component {
     }
   }
 
-  secHeader() {
-    const category = this.section.category || '';
-    // console.log(category);
-    if ((!(category === 'item')) && (!(category === 'quote'))) {
-      return (
-        <div className="sec-head">
-          <h2 className="title">{this.section.title}</h2>
-          <h4 className="category">{this.section.category}</h4>
-        </div>
-      );
-    } else if (category === 'quote') {
-      return(
-        <div className="quote">
-          {this.section.quote}
-        </div>
-      );
-    } else {
-      return (
-        <div className="sec-head">
-          <h2 className="title">{this.section.title}</h2>
-          <button className="btn-price">{this.section.price}</button>
-        </div>
-      );
-    }
-  }
+
 
   render() {
     return (
       <section className={`box-${this.section.boxNum}` + ' ' + this.section.align}>
-        {this.secHeader()}
+        <SecHeader secData={this.section} />
         {this.Description()}
         {this.secFooter()}
       </section>

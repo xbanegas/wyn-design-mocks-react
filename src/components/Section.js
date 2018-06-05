@@ -3,15 +3,15 @@ import '../css/Section.css';
 
 /**
  * @todo move secFooter and secHeader to their own components 
- * @todo implement likes from secdata.json
  */
 
 class Section extends Component {
   constructor(props){
     super(props);
-    this.state = {likes: 4334}
-    this.handleLike = this.handleLike.bind(this);
     this.section = props.secData;
+    this.state = {likes: this.section.likes}
+    this.handleLike = this.handleLike.bind(this);
+    
     console.log(this.section);
   }
 

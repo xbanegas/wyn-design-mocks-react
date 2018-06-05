@@ -3,7 +3,8 @@
 		"row": 1,
 		"boxNum": 1,
 		"title": "Anders Lindn",
-		"category": "featured"
+		"category": "featured",
+		"likes": 4834
 	},
 	{
 		"row": 2,
@@ -17,14 +18,16 @@
 		"row": 2,
 		"boxNum": 2,
 		"title": "Olaf Hussein 14 / 15",
-		"category": "style"
+		"category": "style",
+		"likes": 743
 	},
 	{
 		"row": 3,
 		"boxNum": 1,
 		"title": "Airfield",
 		"category": "Photography",
-		"align": "ralign"
+		"align": "ralign",
+		"likes": 583
 	},
 	{
 		"row": 3,
@@ -45,18 +48,21 @@
 		"row": 3,
 		"boxNum": 4,
 		"title": "Lapka Bam",
-		"category": "Gear"
+		"category": "Gear",
+		"likes": 587
 	},
 	{
 		"row": 4,
 		"boxNum": 1,
 		"title": "Smeig",
-		"category": "Technology"
+		"category": "Technology",
+		"likes": 362
 	},
 	{
 		"row": 4,
 		"boxNum": 2,
 		"title": "Balloon Bench",
-		"category": "Design"
+		"category": "Design",
+		"likes": 243
 	}
 ]

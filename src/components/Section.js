@@ -11,6 +11,8 @@ class Section extends Component {
     super(props);
     this.state = {likes: 4334}
     this.handleLike = this.handleLike.bind(this);
+    this.section = props.secData;
+    console.log(this.section);
   }
 
   handleLike(e){
@@ -20,8 +22,8 @@ class Section extends Component {
     }));
   }
 
-  secFooter(props) {
-    const category = props.category || '';
+  secFooter() {
+    const category = this.section.category || '';
     if ((!(category === 'item')) && (!(category === 'quote'))) {
       return (
         <div className="sec-foot to-bottom">
@@ -32,7 +34,7 @@ class Section extends Component {
     } else if (category === 'quote') {
       return(
         <div className="author">
-          {props.author}
+          {this.section.author}
         </div>
       );
     } else {
@@ -44,8 +46,8 @@ class Section extends Component {
     }
   }
 
-  Description(props) {
-    const hasDescription = props.hasDescription || false;
+  Description() {
+    const hasDescription = this.section.description || false;
     if (hasDescription) {
       return ( <div className="description">{hasDescription}</div> );
     } else { 
@@ -53,27 +55,27 @@ class Section extends Component {
     }
   }
 
-  secHeader(props) {
-    const category = props.category || '';
+  secHeader() {
+    const category = this.section.category || '';
     // console.log(category);
     if ((!(category === 'item')) && (!(category === 'quote'))) {
       return (
         <div className="sec-head">
-          <h2 className="title">{props.title}</h2>
-          <h4 className="category">{props.category}</h4>
+          <h2 className="title">{this.section.title}</h2>
+          <h4 className="category">{this.section.category}</h4>
         </div>
       );
     } else if (category === 'quote') {
       return(
         <div className="quote">
-          {props.quote}
+          {this.section.quote}
         </div>
       );
     } else {
       return (
         <div className="sec-head">
-          <h2 className="title">{props.title}</h2>
-          <button className="btn-price">{props.price}</button>
+          <h2 className="title">{this.section.title}</h2>
+          <button className="btn-price">{this.section.price}</button>
         </div>
       );
     }
@@ -81,10 +83,10 @@ class Section extends Component {
 
   render() {
     return (
-      <section className={this.props.box + ' ' + this.props.secAlign}>
-        {this.secHeader(this.props)}
-        {this.Description(this.props)}
-        {this.secFooter(this.props)}
+      <section className={`box-${this.section.boxNum}` + ' ' + this.section.align}>
+        {this.secHeader()}
+        {this.Description()}
+        {this.secFooter()}
       </section>
     );
   }

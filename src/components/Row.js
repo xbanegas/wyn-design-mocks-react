@@ -3,9 +3,6 @@ import Section from './Section';
 import '../css/Main.css';
 import '../css/Row.css'
 
-/**
- * @todo simply send <Section secData=section />
-*/
 
 class Row extends Component {
   constructor(props){
@@ -21,9 +18,7 @@ class Row extends Component {
 
       these_props.forEach(section => {
       // console.log(section)
-        these_sections.push(<Section box={`box-${section.boxNum}`} category={section.category} title={section.title} 
-          description={section.description} price={section.price} hasDescription={section.description} secAlign={section.align}
-          quote={section.quote} author={section.author}/>);
+        these_sections.push(<Section secData={section} />);
       });
     this.sections = these_sections;
     }

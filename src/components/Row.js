@@ -11,7 +11,7 @@ class Row extends Component {
 	addSections(props){
     if (props){
     let these_props = props.sections.slice(1);
-    console.log(these_props);
+    // console.log(these_props);
     let these_sections = [];
     these_props.forEach(section => {
       // console.log(section);

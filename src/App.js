@@ -23,7 +23,7 @@ class App extends Component {
 			these_rows.push(this_row);
     });
     
-    console.log(these_rows);
+    // console.log(these_rows);
     // console.log(rows);
     return these_rows;
   }

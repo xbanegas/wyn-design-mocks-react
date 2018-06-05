@@ -3,10 +3,6 @@ import '../css/Section.css';
 
 class Section extends Component {
 
-  componentDidMount(){
-    console.log(this.props);
-  }
-
 	render() {
 		function Description(props) {
 			const hasDescription = props.hasDescription || false;
@@ -19,13 +15,19 @@ class Section extends Component {
 
 		function secFooter(props) {
 			const category = props.category || '';
-			if (!(category === 'item')) {
+			if ((!(category === 'item')) && (!(category == 'quote'))) {
 				return (
 					<div className="sec-foot to-bottom">
 						<a href="#" class="btn-like"><i class="fa fa-heart"></i>&nbsp;&nbsp;4334</a>
 						<button class="btn-read">Read Post > </button>
 					</div>
-				);
+        );
+      } else if (category === 'quote') {
+        return(
+          <div className="author">
+            {props.author}
+          </div>
+        );
 			} else {
 				return ( 
 					<div className="sec-foot to-bottom">
@@ -36,15 +38,22 @@ class Section extends Component {
 		}
 
 		function secHeader(props) {
-			const category = props.category || '';
-			if (!(category === 'item')) {
+      const category = props.category || '';
+      console.log(category);
+			if ((!(category === 'item')) && (!(category == 'quote'))) {
 				return (
 					<div className="sec-head">
 						<h2 className="title">{props.title}</h2>
 						<h4 className="category">{props.category}</h4>
 					</div>
 				);
-			} else {
+      } else if (category === 'quote') {
+        return(
+          <div className="quote">
+            {props.quote}
+          </div>
+        );
+      } else {
 				return (
 					<div className="sec-head">
 						<h2 className="title">{props.title}</h2>
@@ -55,8 +64,7 @@ class Section extends Component {
 		}
 
 		return (
-      // this.props.styleName + ' ' + this.props.secAlign
-			<section className={this.props.box}>
+			<section className={this.props.box + ' ' + this.props.secAlign}>
 				{secHeader(this.props)}
 				{Description(this.props)}
 				{secFooter(this.props)}

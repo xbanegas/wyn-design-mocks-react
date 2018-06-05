@@ -9,7 +9,9 @@
 		"row": 2,
 		"boxNum": 1,
 		"title": "",
-		"category": "quote"
+		"category": "quote",
+		"quote": "Sorry I have been out of touch this week. There was a snowstorm and I have been watching movies.",
+		"author": "Leonardo da Vinci"
 	},
 	{
 		"row": 2,
@@ -21,7 +23,8 @@
 		"row": 3,
 		"boxNum": 1,
 		"title": "Airfield",
-		"category": "Photography"
+		"category": "Photography",
+		"align": "ralign"
 	},
 	{
 		"row": 3,
@@ -34,7 +37,9 @@
 		"row": 3,
 		"boxNum": 3,
 		"title": "Are Self Driving Cars The Future?",
-		"category": "Featured"
+		"category": "Featured",
+		"description": "In this featured story we try and figure out if self driving cars really are the future.",
+		"align": "calign"
 	},
 	{
 		"row": 3,

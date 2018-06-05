@@ -16,7 +16,8 @@ class Row extends Component {
     these_props.forEach(section => {
       // console.log(section);
       these_sections.push(<Section box={`box-${section.boxNum}`} category={section.category} title={section.title} 
-      description={section.description} price={section.price}/>);
+      description={section.description} price={section.price} hasDescription={section.description} secAlign={section.align}
+      quote={section.quote} author={section.author}/>);
     });
     this.sections = these_sections;
   }

@@ -44,7 +44,11 @@ nav { text-align: center; position: relative; display: flex; justify-content:spa
 .ralign { text-align: right; align-items:flex-end;}
 .calign { text-align: center; align-items:center;}
 
-.sec-head {flex-basis:auto;}
+.sec-head {
+  flex-basis:auto;
+  display: flex;
+  flex-direction: column;
+}
 
 .sec-foot { 
 	padding-bottom: 15px; 
@@ -180,6 +184,10 @@ nav { text-align: center; position: relative; display: flex; justify-content:spa
 	background-blend-mode: screen;
 }
 
+#row-3 .box-3 .category {order:-1;margin-bottom: 3em;}
+#row-3 .box-3 .title {margin-bottom: .3em;}
+#row-3 .box-3 .description {margin-bottom: 3em;}
+#row-3 .box-3 .btn-like { display: none;}
 
 #row-3 .box-4 { 
 	background:url(../media/row3-arm.jpeg);

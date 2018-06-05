@@ -2,7 +2,8 @@
 
 Uses secdata.json to generate components. 
 
-
+![reference image](https://github.com/xbanegas/wyn-design-mocks-react/raw/master/digest.png)
+![my screenshot](https://github.com/xbanegas/wyn-design-mocks-react/blob/master/my_digest.png)
 
 <br><br>
 

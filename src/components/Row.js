@@ -3,6 +3,10 @@ import Section from './Section';
 import '../css/Main.css';
 import '../css/Row.css'
 
+/**
+ * @todo simply send <Section secData=section />
+*/
+
 class Row extends Component {
   constructor(props){
     super(props);
@@ -14,14 +18,15 @@ class Row extends Component {
       let these_props = props.sections.slice(1);
       // console.log(these_props);
       let these_sections = [];
+
       these_props.forEach(section => {
-      // console.log(section);
+      // console.log(section)
         these_sections.push(<Section box={`box-${section.boxNum}`} category={section.category} title={section.title} 
           description={section.description} price={section.price} hasDescription={section.description} secAlign={section.align}
           quote={section.quote} author={section.author}/>);
       });
     this.sections = these_sections;
-  }
+    }
 	}
 
 	render() {

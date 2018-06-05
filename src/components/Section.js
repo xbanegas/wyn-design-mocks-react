@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import '../css/Section.css';
 
+/**
+ * @todo move secFooter and secHeader to their own components 
+ * @todo implement likes from secdata.json
+ */
+
 class Section extends Component {
   constructor(props){
     super(props);
@@ -14,7 +19,7 @@ class Section extends Component {
       likes: prevState.likes += 1
     }));
   }
-  
+
   secFooter(props) {
     const category = props.category || '';
     if ((!(category === 'item')) && (!(category === 'quote'))) {

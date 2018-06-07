@@ -14,7 +14,7 @@ class SecHeader extends Component {
             return (
                 <div className="sec-head">
                     <h2 className="title">{this.section.title}</h2>
-                    <h4 className="category">{this.section.category}</h4>
+                    <h4 className="category">{this.category}</h4>
                 </div>
             );
         } else if (category === 'quote') {

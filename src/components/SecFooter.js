@@ -18,7 +18,7 @@ class SecFooter extends Component {
     }
 
     render() {
-        const category = this.section.category || '';
+        const category = this.category || '';
         if ((!(category === 'item')) && (!(category === 'quote'))) {
           return (
             <div className="sec-foot to-bottom">
@@ -33,9 +33,9 @@ class SecFooter extends Component {
             </div>
           );
         } else {
-          return ( 
+          return (
             <div className="sec-foot to-bottom">
-              <button className="btn-read">Buy Now > </button> 
+              <button className="btn-read">Buy Now > </button>
             </div>
           );
         }
